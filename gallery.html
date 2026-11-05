@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Gallery | Samra Dance Academy</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #f7f2e9;
+        color: #32191a;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+        height: 88px;
+        padding: 0 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #251112;
+        position: relative;
+        z-index: 10;
+    }
+
+    .logo {
+        text-decoration: none;
+        color: #e4c274;
+        line-height: 1;
+    }
+
+    .logo-main {
+        display: block;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 31px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .logo-sub {
+        display: block;
+        font-size: 8px;
+        letter-spacing: 5px;
+        color: #eee1c5;
+        margin-top: 5px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 31px;
+    }
+
+    .nav-links a {
+        color: #eee4d3;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        transition: 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #e4c274;
+    }
+
+    /* =========================
+       GALLERY INTRO
+    ========================= */
+
+    .gallery-intro {
+        min-height: 360px;
+        background:
+            radial-gradient(circle at 80% 20%, rgba(228,194,116,0.12), transparent 30%),
+            #251112;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 70px 20px 80px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .gallery-intro::before {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        border: 1px solid rgba(228,194,116,0.25);
+        border-radius: 50%;
+        right: -80px;
+        top: -80px;
+    }
+
+    .gallery-intro::after {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(228,194,116,0.18);
+        border-radius: 50%;
+        left: -70px;
+        bottom: -80px;
+    }
+
+    .intro-content {
+        max-width: 720px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .small-heading {
+        font-size: 11px;
+        letter-spacing: 5px;
+        color: #e4c274;
+        margin-bottom: 17px;
+    }
+
+    .gallery-intro h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(55px, 8vw, 88px);
+        font-weight: 500;
+        line-height: 0.9;
+        margin-bottom: 25px;
+    }
+
+    .gallery-intro p {
+        max-width: 550px;
+        margin: auto;
+        color: #d9cec0;
+        font-size: 13px;
+        line-height: 1.9;
+        font-weight: 300;
+    }
+
+    /* =========================
+       GALLERY SECTION
+    ========================= */
+
+    .gallery-section {
+        padding: 95px 7% 110px;
+        background: #f7f2e9;
+    }
+
+    .gallery-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 55px;
+    }
+
+    .gallery-heading h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 48px;
+        font-weight: 500;
+        color: #32191a;
+    }
+
+    .gallery-heading p {
+        max-width: 360px;
+        font-size: 11px;
+        line-height: 1.8;
+        color: #786d67;
+        text-align: right;
+    }
+
+    /* =========================
+       EDITORIAL GRID
+    ========================= */
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr 1fr;
+        grid-template-rows: 310px 310px;
+        gap: 22px;
+        max-width: 1250px;
+        margin: auto;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        background: #2a1718;
+        cursor: pointer;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.7s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.06);
+    }
+
+    /* Large featured image */
+
+    .gallery-item.featured {
+        grid-row: span 2;
+    }
+
+    .gallery-item.featured img {
+        object-position: center;
+    }
+
+    /* Tall middle image */
+
+    .gallery-item.tall {
+        grid-row: span 2;
+    }
+
+    /* Image overlay */
+
+    .image-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 28px;
+        background: linear-gradient(
+            to top,
+            rgba(20, 8, 9, 0.82),
+            rgba(20, 8, 9, 0.05) 65%
+        );
+        opacity: 0;
+        transition: 0.4s ease;
+    }
+
+    .gallery-item:hover .image-overlay {
+        opacity: 1;
+    }
+
+    .image-number {
+        color: #e4c274;
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 8px;
+    }
+
+    .image-overlay h3 {
+        color: white;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 31px;
+        font-weight: 500;
+    }
+
+    .image-overlay span {
+        color: #ddd0c1;
+        font-size: 9px;
+        letter-spacing: 2px;
+        margin-top: 5px;
+    }
+
+    /* =========================
+       FEATURED QUOTE
+    ========================= */
+
+    .gallery-quote {
+        padding: 100px 20px;
+        text-align: center;
+        background: #321617;
+        color: white;
+        position: relative;
+    }
+
+    .quote-line {
+        width: 55px;
+        height: 1px;
+        background: #e4c274;
+        margin: 0 auto 30px;
+    }
+
+    .gallery-quote h2 {
+        max-width: 780px;
+        margin: auto;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: clamp(34px, 5vw, 58px);
+        font-weight: 400;
+        line-height: 1.15;
+    }
+
+    .gallery-quote p {
+        margin-top: 22px;
+        font-size: 10px;
+        letter-spacing: 4px;
+        color: #d7c6aa;
+    }
+
+    /* =========================
+       BOTTOM CTA
+    ========================= */
+
+    .gallery-cta {
+        padding: 85px 20px;
+        text-align: center;
+        background: #f7f2e9;
+    }
+
+    .gallery-cta h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 46px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .gallery-cta p {
+        font-size: 12px;
+        color: #766b65;
+        margin-bottom: 30px;
+    }
+
+    .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        background: #321617;
+        color: #e4c274;
+        padding: 15px 27px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        transition: 0.3s ease;
+    }
+
+    .cta-btn:hover {
+        background: #e4c274;
+        color: #321617;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        background: #18090a;
+        color: #cfc2b3;
+        padding: 50px 7% 25px;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 35px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-logo {
+        font-family: 'Cormorant Garamond', serif;
+        color: #e4c274;
+        font-size: 30px;
+    }
+
+    .footer-text {
+        font-size: 10px;
+        letter-spacing: 1px;
+        color: #9e9185;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 17px;
+    }
+
+    .footer-social a {
+        color: #d8c8b4;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .footer-social a:hover {
+        color: #e4c274;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 25px;
+        font-size: 9px;
+        letter-spacing: 1px;
+        color: #71655e;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+        .navbar {
+            padding: 0 5%;
+        }
+
+        .nav-links {
+            gap: 15px;
+        }
+
+        .nav-links a {
+            font-size: 10px;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 350px 280px 280px;
+        }
+
+        .gallery-item.featured {
+            grid-row: span 1;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        .gallery-heading {
+            display: block;
+        }
+
+        .gallery-heading p {
+            text-align: left;
+            margin-top: 12px;
+        }
+    }
+
+    @media (max-width: 650px) {
+
+        .navbar {
+            height: auto;
+            padding: 22px 6%;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 13px;
+        }
+
+        .gallery-intro {
+            min-height: 320px;
+        }
+
+        .gallery-section {
+            padding: 65px 6% 75px;
+        }
+
+        .gallery-heading h2 {
+            font-size: 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 330px);
+            gap: 15px;
+        }
+
+        .gallery-item.featured,
+        .gallery-item.tall {
+            grid-row: span 1;
+        }
+
+        .image-overlay {
+            opacity: 1;
+        }
+
+        .gallery-quote {
+            padding: 75px 25px;
+        }
+
+        .gallery-cta {
+            padding: 70px 20px;
+        }
+
+        .footer-top {
+            flex-direction: column;
+            gap: 25px;
+            text-align: center;
+        }
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        <span class="logo-main">SAMRA</span>
+        <span class="logo-sub">DANCE ACADEMY</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="dance-forms.html">DANCE FORMS</a>
+        <a href="courses.html">COURSES</a>
+        <a href="gallery.html" class="active">GALLERY</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="enroll.html">ENROLL</a>
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     GALLERY INTRO
+========================= -->
+
+<section class="gallery-intro">
+
+    <div class="intro-content">
+
+        <div class="small-heading">
+            MOMENTS IN MOTION
+        </div>
+
+        <h1>Gallery</h1>
+
+        <p>
+            A visual collection of grace, rhythm and expression —
+            celebrating the timeless beauty of Indian classical dance.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="gallery-section">
+
+    <div class="gallery-heading">
+
+        <div>
+            <div class="small-heading">
+                CLASSICAL COLLECTION
+            </div>
+
+            <h2>The Art of Movement</h2>
+        </div>
+
+        <p>
+            Every gesture carries meaning. Every movement becomes
+            a story. Explore moments inspired by India's classical
+            dance traditions.
+        </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+        <!-- 01 -->
+        <div class="gallery-item featured">
+
+            <img
+                src="images/bharatanatyam.jpg"
+                alt="Bharatanatyam dancer performing">
+
+            <div class="image-overlay">
+
+                <div class="image-number">01 — CLASSICAL</div>
+
+                <h3>Bharatanatyam</h3>
+
+                <span>RHYTHM · EXPRESSION · DISCIPLINE</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- 02 -->
+        <div class="gallery-item tall">
+
+            <img
+                src="images/kathak.jpg"
+                alt="Kathak dancer performing">
+
+            <div class="image-overlay">
+
+                <div class="image-number">02 — CLASSICAL</div>
+
+                <h3>Kathak</h3>
+
+                <span>GRACE · FOOTWORK · STORYTELLING</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- 03 -->
+        <div class="gallery-item">
+
+            <img
+                src="images/kuchipudi.jpg"
+                alt="Kuchipudi dancer performing">
+
+            <div class="image-overlay">
+
+                <div class="image-number">03 — CLASSICAL</div>
+
+                <h3>Kuchipudi</h3>
+
+                <span>ENERGY · EXPRESSION · TRADITION</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- 04 -->
+        <div class="gallery-item">
+
+            <img
+                src="images/odissi.jpg"
+                alt="Odissi dancer performing">
+
+            <div class="image-overlay">
+
+                <div class="image-number">04 — CLASSICAL</div>
+
+                <h3>Odissi</h3>
+
+                <span>SCULPTURAL · ELEGANT · EXPRESSIVE</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- 05 -->
+        <div class="gallery-item">
+
+            <img
+                src="images/mohiniyattam.jpg"
+                alt="Mohiniyattam dancer performing">
+
+            <div class="image-overlay">
+
+                <div class="image-number">05 — CLASSICAL</div>
+
+                <h3>Mohiniyattam</h3>
+
+                <span>SOFTNESS · ELEGANCE · EMOTION</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- 06 -->
+        <div class="gallery-item">
+
+            <img
+                src="images/sattriya.jpg"
+                alt="Sattriya dancer performing">
+
+            <div class="image-overlay">
+
+                <div class="image-number">06 — CLASSICAL</div>
+
+                <h3>Sattriya</h3>
+
+                <span>HERITAGE · RHYTHM · DEVOTION</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     QUOTE
+========================= -->
+
+<section class="gallery-quote">
+
+    <div class="quote-line"></div>
+
+    <h2>
+        “When words fall silent,
+        the body begins to speak.”
+    </h2>
+
+    <p>
+        THE LANGUAGE OF INDIAN CLASSICAL DANCE
+    </p>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="gallery-cta">
+
+    <h2>Begin Your Own Story</h2>
+
+    <p>
+        Discover the discipline, beauty and expression of Indian classical dance.
+    </p>
+
+    <a href="enroll.html" class="cta-btn">
+        JOIN SAMRA
+        <i class="bi bi-arrow-right"></i>
+    </a>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div>
+            <div class="footer-logo">SAMRA</div>
+
+            <div class="footer-text">
+                DANCE ACADEMY
+            </div>
+        </div>
+
+        <div class="footer-social">
+
+            <a href="#">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="bi bi-youtube"></i>
+            </a>
+
+            <a href="#">
+                <i class="bi bi-facebook"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Samra Dance Academy · Preserving Tradition Through Movement
+    </div>
+
+</footer>
+
+
+</body>
+</html>

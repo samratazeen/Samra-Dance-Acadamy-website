@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enroll | Samra Dance Academy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+          rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f2eb;
+    color: #2b1717;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+nav {
+
+    height: 90px;
+
+    padding: 0 7%;
+
+    background: #261313;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+.logo {
+
+    color: #d8b56c;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+}
+
+.logo small {
+
+    display: block;
+
+    color: white;
+
+    text-align: center;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 4px;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+
+}
+
+.nav-links a {
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover {
+
+    color: #d8b56c;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.enroll-hero {
+
+    min-height: 500px;
+
+    background: #291616;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr .9fr;
+
+}
+
+
+/* HERO TEXT */
+
+.hero-text {
+
+    padding: 90px 8%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+.hero-label {
+
+    color: #d8b56c;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+.hero-text h1 {
+
+    margin-top: 18px;
+
+    color: white;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(70px, 8vw, 115px);
+
+    font-weight: 400;
+
+    line-height: .82;
+
+}
+
+.hero-text h1 span {
+
+    display: block;
+
+    margin-left: 50px;
+
+    color: #d8b56c;
+
+    font-style: italic;
+
+}
+
+.hero-text p {
+
+    max-width: 470px;
+
+    margin-top: 30px;
+
+    color: #cbbdb7;
+
+    font-size: 11px;
+
+    line-height: 2;
+
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.hero-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+}
+
+.hero-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(41,22,22,.2),
+        transparent
+    );
+
+}
+
+
+/* =====================================================
+   JOURNEY INTRO
+===================================================== */
+
+.journey-intro {
+
+    padding: 100px 8% 55px;
+
+    text-align: center;
+
+}
+
+.journey-intro small {
+
+    color: #9b7438;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+.journey-intro h2 {
+
+    margin-top: 15px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 62px;
+
+    font-weight: 500;
+
+    line-height: .95;
+
+}
+
+.journey-intro h2 span {
+
+    color: #a47b3b;
+
+    font-style: italic;
+
+}
+
+.journey-intro p {
+
+    max-width: 650px;
+
+    margin: 20px auto;
+
+    color: #74645e;
+
+    font-size: 11px;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================================
+   STEPS
+===================================================== */
+
+.steps {
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding: 30px 8% 90px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+.step {
+
+    position: relative;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e5ddd5;
+
+}
+
+.step-number {
+
+    color: #c49b58;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 32px;
+
+}
+
+.step h3 {
+
+    margin-top: 10px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+}
+
+.step p {
+
+    margin-top: 8px;
+
+    color: #786863;
+
+    font-size: 9px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================================
+   APPLICATION SECTION
+===================================================== */
+
+.application {
+
+    padding: 100px 8%;
+
+    background: #eadcca;
+
+}
+
+.application-heading {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+.application-heading small {
+
+    color: #96703a;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+}
+
+.application-heading h2 {
+
+    margin-top: 12px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 65px;
+
+    font-weight: 500;
+
+}
+
+.application-heading h2 span {
+
+    color: #a47b3b;
+
+    font-style: italic;
+
+}
+
+
+/* =====================================================
+   FORM CONTAINER
+===================================================== */
+
+.application-box {
+
+    max-width: 1050px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 50px;
+
+    box-shadow: 0 25px 70px rgba(45,25,25,.08);
+
+}
+
+
+/* =====================================================
+   FORM SECTIONS
+===================================================== */
+
+.form-section {
+
+    margin-bottom: 45px;
+
+}
+
+.form-section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+.form-section-number {
+
+    color: #b48a48;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 25px;
+
+}
+
+.form-section-title h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+
+    font-weight: 500;
+
+}
+
+
+/* FORM GRID */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.form-group.full {
+
+    grid-column: 1 / -1;
+
+}
+
+.form-group label {
+
+    margin-bottom: 8px;
+
+    color: #4d3a37;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+}
+
+.form-group input,
+.form-group select {
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #ddd4cb;
+
+    outline: none;
+
+    background: #faf8f5;
+
+    color: #352424;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 10px;
+
+    transition: .3s;
+
+}
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #b18a4d;
+
+    background: white;
+
+}
+
+
+/* =====================================================
+   DANCE FORM CARDS
+===================================================== */
+
+.dance-options {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+}
+
+.dance-option input {
+
+    display: none;
+
+}
+
+.dance-option label {
+
+    display: block;
+
+    padding: 18px 8px;
+
+    border: 1px solid #ddd4cb;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.dance-option label strong {
+
+    display: block;
+
+    color: #332121;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 19px;
+
+    font-weight: 500;
+
+}
+
+.dance-option label span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #897a73;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+}
+
+.dance-option input:checked + label {
+
+    background: #2a1717;
+
+    border-color: #2a1717;
+
+}
+
+.dance-option input:checked + label strong {
+
+    color: #d8b56c;
+
+}
+
+.dance-option input:checked + label span {
+
+    color: #c6b8b1;
+
+}
+
+
+/* =====================================================
+   LEVEL OPTIONS
+===================================================== */
+
+.level-options {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+.level-option input {
+
+    display: none;
+
+}
+
+.level-option label {
+
+    display: block;
+
+    padding: 18px;
+
+    border: 1px solid #ddd4cb;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.level-option label strong {
+
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+}
+
+.level-option label span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #81716b;
+
+    font-size: 8px;
+
+}
+
+.level-option input:checked + label {
+
+    background: #eadcca;
+
+    border-color: #a98245;
+
+}
+
+
+/* =====================================================
+   BATCH OPTIONS
+===================================================== */
+
+.batch-options {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+.batch-option input {
+
+    display: none;
+
+}
+
+.batch-option label {
+
+    display: block;
+
+    padding: 17px;
+
+    border: 1px solid #ddd4cb;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.batch-option label strong {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+.batch-option label span {
+
+    display: block;
+
+    margin-top: 7px;
+
+    color: #81716b;
+
+    font-size: 8px;
+
+}
+
+.batch-option input:checked + label {
+
+    border-color: #a98245;
+
+    background: #faf4ea;
+
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.submit-area {
+
+    padding-top: 30px;
+
+    border-top: 1px solid #e1d8d0;
+
+    text-align: center;
+
+}
+
+.submit-btn {
+
+    min-width: 260px;
+
+    padding: 18px 35px;
+
+    border: none;
+
+    background: #291616;
+
+    color: #d8b56c;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.submit-btn:hover {
+
+    background: #d8b56c;
+
+    color: #291616;
+
+}
+
+.submit-note {
+
+    margin-top: 15px;
+
+    color: #8b7c75;
+
+    font-size: 8px;
+
+}
+
+
+/* =====================================================
+   FINAL MESSAGE
+===================================================== */
+
+.final-section {
+
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background: #291616;
+
+    color: white;
+
+}
+
+.final-section small {
+
+    color: #d8b56c;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+}
+
+.final-section h2 {
+
+    margin-top: 15px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 62px;
+
+    font-weight: 400;
+
+}
+
+.final-section h2 span {
+
+    color: #d8b56c;
+
+    font-style: italic;
+
+}
+
+.final-section p {
+
+    max-width: 600px;
+
+    margin: 20px auto;
+
+    color: #c8b9b3;
+
+    font-size: 10px;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 55px 7% 25px;
+
+    background: #211111;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+.footer-logo {
+
+    color: #d8b56c;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 34px;
+
+    letter-spacing: 4px;
+
+}
+
+footer p {
+
+    max-width: 500px;
+
+    margin: 15px auto 25px;
+
+    color: #b9aaa4;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+}
+
+.footer-links {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 28px;
+
+    list-style: none;
+
+}
+
+.footer-links a {
+
+    color: #ddd4d0;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+}
+
+.footer-links a:hover {
+
+    color: #d8b56c;
+
+}
+
+.copyright {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    color: #83736d;
+
+    font-size: 8px;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width: 900px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .enroll-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        height: 500px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .dance-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    .hero-text {
+        padding: 75px 7%;
+    }
+
+    .hero-text h1 {
+        font-size: 70px;
+    }
+
+    .hero-text h1 span {
+        margin-left: 20px;
+    }
+
+    .hero-image {
+        height: 430px;
+    }
+
+    .journey-intro {
+        padding: 75px 6% 40px;
+    }
+
+    .journey-intro h2 {
+        font-size: 48px;
+    }
+
+    .application {
+        padding: 70px 6%;
+    }
+
+    .application-heading h2 {
+        font-size: 50px;
+    }
+
+    .application-box {
+        padding: 25px 18px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .dance-options {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .level-options {
+        grid-template-columns: 1fr;
+    }
+
+    .batch-options {
+        grid-template-columns: 1fr;
+    }
+
+    .final-section {
+        padding: 75px 6%;
+    }
+
+    .final-section h2 {
+        font-size: 48px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+    <a href="index.html" class="logo">
+
+        SAMRA
+
+        <small>
+            DANCE ACADEMY
+        </small>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+
+        <li>
+            <a href="about.html">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="dance-forms.html">DANCE FORMS</a>
+        </li>
+
+        <li>
+            <a href="courses.html">COURSES</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">GALLERY</a>
+        </li>
+
+        <li>
+            <a href="contact.html">CONTACT</a>
+        </li>
+
+        <li>
+            <a href="enroll.html">ENROLL</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="enroll-hero">
+
+
+    <div class="hero-text">
+
+        <div class="hero-label">
+            ADMISSIONS ARE OPEN
+        </div>
+
+        <h1>
+
+            Begin
+
+            <span>Your Journey.</span>
+
+        </h1>
+
+        <p>
+
+            Every dancer begins with a single step.
+            Choose your path, find your rhythm and
+            begin your journey with Samra Dance Academy.
+
+        </p>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <!-- CHANGE THIS IMAGE -->
+
+        <img
+            src="images/enroll-dancer.jpg"
+            alt="Indian classical dancer"
+        >
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="journey-intro">
+
+    <small>
+        YOUR ADMISSION JOURNEY
+    </small>
+
+    <h2>
+
+        Three Steps To
+        <span>Begin.</span>
+
+    </h2>
+
+    <p>
+
+        Joining Samra is more than enrolling in a class.
+        It is the beginning of a relationship with rhythm,
+        movement, discipline and Indian artistic tradition.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     STEPS
+===================================================== -->
+
+<section class="steps">
+
+
+    <div class="step">
+
+        <div class="step-number">
+            01
+        </div>
+
+        <h3>
+            Choose Your Form
+        </h3>
+
+        <p>
+
+            Select the classical or folk dance
+            form that inspires you.
+
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            02
+        </div>
+
+        <h3>
+            Find Your Level
+        </h3>
+
+        <p>
+
+            Whether you're beginning today or
+            already have experience, choose
+            the level that suits you.
+
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            03
+        </div>
+
+        <h3>
+            Start Your Journey
+        </h3>
+
+        <p>
+
+            Submit your application and our
+            academy team will guide you further.
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     APPLICATION
+===================================================== -->
+
+<section class="application">
+
+
+    <div class="application-heading">
+
+        <small>
+            SAMRA ACADEMY
+        </small>
+
+        <h2>
+            Enrollment <span>Application</span>
+        </h2>
+
+    </div>
+
+
+
+    <div class="application-box">
+
+
+        <form onsubmit="submitApplication(event)">
+
+
+            <!-- =================================================
+                 SECTION 01
+            ================================================== -->
+
+            <div class="form-section">
+
+
+                <div class="form-section-title">
+
+                    <div class="form-section-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Choose Your Dance
+                    </h3>
+
+                </div>
+
+
+                <div class="dance-options">
+
+
+                    <div class="dance-option">
+
+                        <input
+                            type="radio"
+                            id="bharatanatyam"
+                            name="dance"
+                            required
+                        >
+
+                        <label for="bharatanatyam">
+
+                            <strong>
+                                Bharatanatyam
+                            </strong>
+
+                            <span>
+                                CLASSICAL
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="dance-option">
+
+                        <input
+                            type="radio"
+                            id="kathak"
+                            name="dance"
+                        >
+
+                        <label for="kathak">
+
+                            <strong>
+                                Kathak
+                            </strong>
+
+                            <span>
+                                CLASSICAL
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="dance-option">
+
+                        <input
+                            type="radio"
+                            id="kuchipudi"
+                            name="dance"
+                        >
+
+                        <label for="kuchipudi">
+
+                            <strong>
+                                Kuchipudi
+                            </strong>
+
+                            <span>
+                                CLASSICAL
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="dance-option">
+
+                        <input
+                            type="radio"
+                            id="odissi"
+                            name="dance"
+                        >
+
+                        <label for="odissi">
+
+                            <strong>
+                                Odissi
+                            </strong>
+
+                            <span>
+                                CLASSICAL
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="dance-option">
+
+                        <input
+                            type="radio"
+                            id="kathakali"
+                            name="dance"
+                        >
+
+                        <label for="kathakali">
+
+                            <strong>
+                                Kathakali
+                            </strong>
+
+                            <span>
+                                CLASSICAL
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="dance-option">
+
+                        <input
+                            type="radio"
+                            id="mohiniyattam"
+                            name="dance"
+                        >
+
+                        <label for="mohiniyattam">
+
+                            <strong>
+                                Mohiniyattam
+                            </strong>
+
+                            <span>
+                                CLASSICAL
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="dance-option">
+
+                        <input
+                            type="radio"
+                            id="manipuri"
+                            name="dance"
+                        >
+
+                        <label for="manipuri">
+
+                            <strong>
+                                Manipuri
+                            </strong>
+
+                            <span>
+                                CLASSICAL
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="dance-option">
+
+                        <input
+                            type="radio"
+                            id="folk"
+                            name="dance"
+                        >
+
+                        <label for="folk">
+
+                            <strong>
+                                Folk Dance
+                            </strong>
+
+                            <span>
+                                TRADITIONAL
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SECTION 02
+            ================================================== -->
+
+            <div class="form-section">
+
+
+                <div class="form-section-title">
+
+                    <div class="form-section-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Choose Your Level
+                    </h3>
+
+                </div>
+
+
+                <div class="level-options">
+
+
+                    <div class="level-option">
+
+                        <input
+                            type="radio"
+                            id="beginner"
+                            name="level"
+                            required
+                        >
+
+                        <label for="beginner">
+
+                            <strong>
+                                Beginner
+                            </strong>
+
+                            <span>
+                                No previous experience required
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="level-option">
+
+                        <input
+                            type="radio"
+                            id="intermediate"
+                            name="level"
+                        >
+
+                        <label for="intermediate">
+
+                            <strong>
+                                Intermediate
+                            </strong>
+
+                            <span>
+                                For students with basic training
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="level-option">
+
+                        <input
+                            type="radio"
+                            id="advanced"
+                            name="level"
+                        >
+
+                        <label for="advanced">
+
+                            <strong>
+                                Advanced
+                            </strong>
+
+                            <span>
+                                For experienced dancers
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SECTION 03
+            ================================================== -->
+
+            <div class="form-section">
+
+
+                <div class="form-section-title">
+
+                    <div class="form-section-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Preferred Batch
+                    </h3>
+
+                </div>
+
+
+                <div class="batch-options">
+
+
+                    <div class="batch-option">
+
+                        <input
+                            type="radio"
+                            id="morning"
+                            name="batch"
+                            required
+                        >
+
+                        <label for="morning">
+
+                            <strong>
+                                MORNING
+                            </strong>
+
+                            <span>
+                                8:00 AM – 10:00 AM
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="batch-option">
+
+                        <input
+                            type="radio"
+                            id="evening"
+                            name="batch"
+                        >
+
+                        <label for="evening">
+
+                            <strong>
+                                EVENING
+                            </strong>
+
+                            <span>
+                                4:00 PM – 7:00 PM
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="batch-option">
+
+                        <input
+                            type="radio"
+                            id="weekend"
+                            name="batch"
+                        >
+
+                        <label for="weekend">
+
+                            <strong>
+                                WEEKEND
+                            </strong>
+
+                            <span>
+                                Saturday & Sunday
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SECTION 04
+            ================================================== -->
+
+            <div class="form-section">
+
+
+                <div class="form-section-title">
+
+                    <div class="form-section-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Student Details
+                    </h3>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            STUDENT NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            AGE
+                        </label>
+
+                        <input
+                            type="number"
+                            min="3"
+                            max="100"
+                            placeholder="Age"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            PHONE NUMBER
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="+91 XXXXX XXXXX"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            EMAIL ADDRESS
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="Email address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            CITY
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter your city"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SECTION 05
+            ================================================== -->
+
+            <div class="form-section">
+
+
+                <div class="form-section-title">
+
+                    <div class="form-section-number">
+                        05
+                    </div>
+
+                    <h3>
+                        Parent / Guardian
+                    </h3>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            PARENT / GUARDIAN NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Full name"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            CONTACT NUMBER
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="+91 XXXXX XXXXX"
+                        >
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 SUBMIT
+            ================================================== -->
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+
+                    SUBMIT APPLICATION
+
+                </button>
+
+
+                <p class="submit-note">
+
+                    Our academy team will contact you
+                    regarding your application.
+
+                </p>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL SECTION
+===================================================== -->
+
+<section class="final-section">
+
+    <small>
+        THE FIRST STEP IS YOURS
+    </small>
+
+    <h2>
+
+        Find Your Rhythm.
+        <span>Find Yourself.</span>
+
+    </h2>
+
+    <p>
+
+        At Samra, every student is encouraged to learn
+        with patience, practise with dedication and
+        express themselves with confidence.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        SAMRA
+    </div>
+
+
+    <p>
+
+        Preserving the beauty of Indian dance
+        while inspiring the next generation
+        of dancers.
+
+    </p>
+
+
+    <ul class="footer-links">
+
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+
+        <li>
+            <a href="about.html">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="dance-forms.html">DANCE FORMS</a>
+        </li>
+
+        <li>
+            <a href="courses.html">COURSES</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">GALLERY</a>
+        </li>
+
+        <li>
+            <a href="contact.html">CONTACT</a>
+        </li>
+
+        <li>
+            <a href="enroll.html">ENROLL</a>
+        </li>
+
+    </ul>
+
+
+    <div class="copyright">
+
+        © 2026 Samra Dance Academy.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+function submitApplication(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for choosing Samra Dance Academy! " +
+        "Your enrollment application has been received. " +
+        "Our academy team will contact you soon."
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

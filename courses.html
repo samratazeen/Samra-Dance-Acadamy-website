@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Courses | Samra Dance Academy</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+<style>
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f4ec;
+    color: #281719;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    height: 88px;
+    padding: 0 7%;
+    background: #171011;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 20;
+}
+
+.logo {
+    text-decoration: none;
+    color: #e5c57c;
+}
+
+.logo-main {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.logo-sub {
+    display: block;
+    color: #cfc1b2;
+    font-size: 8px;
+    letter-spacing: 5px;
+    margin-top: 6px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #dcd1c4;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #e5c57c;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.course-hero {
+    min-height: 620px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.course-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.course-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 10, 11, .92) 0%,
+            rgba(20, 10, 11, .73) 38%,
+            rgba(20, 10, 11, .18) 75%,
+            rgba(20, 10, 11, .08)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 80px 8%;
+}
+
+.hero-label {
+    color: #e5c57c;
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 {
+    color: #fffaf2;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(65px, 8vw, 110px);
+    line-height: .83;
+    font-weight: 500;
+    max-width: 650px;
+}
+
+.hero-content h1 span {
+    color: #e5c57c;
+    font-style: italic;
+}
+
+.hero-content p {
+    color: #d7cdc1;
+    max-width: 470px;
+    line-height: 1.9;
+    font-size: 13px;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 34px;
+    padding: 15px 25px;
+    border: 1px solid #e5c57c;
+    color: #e5c57c;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    background: #e5c57c;
+    color: #201214;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    padding: 105px 8%;
+    background: #f8f4ec;
+}
+
+.intro-inner {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: .8fr 1.4fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.intro-small {
+    color: #a17835;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.intro h2 {
+    margin-top: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.intro-text {
+    border-left: 1px solid #d7bd82;
+    padding-left: 40px;
+}
+
+.intro-text p {
+    color: #6f6460;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.intro-text strong {
+    color: #32191a;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   COURSES SECTION
+========================================= */
+
+.courses-section {
+    padding: 105px 7% 120px;
+    background: #211314;
+    color: white;
+}
+
+.section-top {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 55px;
+}
+
+.section-label {
+    color: #e5c57c;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-bottom: 13px;
+}
+
+.section-top h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 500;
+}
+
+.section-description {
+    max-width: 340px;
+    color: #a99c91;
+    font-size: 11px;
+    line-height: 1.9;
+}
+
+
+/* =========================================
+   COURSE CARDS
+========================================= */
+
+.course-grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.course-card {
+    position: relative;
+    height: 490px;
+    overflow: hidden;
+    background: #302021;
+}
+
+.course-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
+}
+
+.course-card:hover img {
+    transform: scale(1.07);
+}
+
+.course-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15, 7, 8, .95),
+            rgba(15, 7, 8, .25) 55%,
+            rgba(15, 7, 8, .05)
+        );
+}
+
+.course-number {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    z-index: 2;
+
+    color: #e5c57c;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.course-info {
+    position: absolute;
+    left: 27px;
+    right: 27px;
+    bottom: 28px;
+    z-index: 3;
+}
+
+.course-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.course-info p {
+    color: #c9beb4;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.course-arrow {
+    position: absolute;
+    right: 26px;
+    bottom: 29px;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(229,197,124,.7);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #e5c57c;
+    transition: .3s;
+}
+
+.course-card:hover .course-arrow {
+    background: #e5c57c;
+    color: #211314;
+}
+
+
+/* =========================================
+   JOURNEY SECTION
+========================================= */
+
+.journey {
+    padding: 110px 8%;
+    background: #f8f4ec;
+}
+
+.journey-header {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+}
+
+.journey-header .section-label {
+    color: #a17835;
+}
+
+.journey-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    font-weight: 500;
+}
+
+.journey-header p {
+    color: #766c66;
+    font-size: 12px;
+    line-height: 1.9;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   LEVELS
+========================================= */
+
+.levels {
+    max-width: 1050px;
+    margin: 70px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+
+    background: #d8c7a9;
+}
+
+.level {
+    background: #f8f4ec;
+    padding: 45px 35px;
+    text-align: center;
+    transition: .35s;
+}
+
+.level:hover {
+    background: #eee6d8;
+}
+
+.level-number {
+    font-family: 'Cormorant Garamond', serif;
+    color: #a17835;
+    font-size: 25px;
+}
+
+.level h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 12px 0;
+}
+
+.level p {
+    color: #766c66;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   WHAT YOU LEARN
+========================================= */
+
+.learning {
+    padding: 100px 8%;
+    background: #e9dfd0;
+}
+
+.learning-inner {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.learning h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 58px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.learning p {
+    color: #716661;
+    font-size: 12px;
+    line-height: 1.9;
+    margin-top: 20px;
+}
+
+.learning-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.learn-item {
+    padding: 22px 15px;
+    border-bottom: 1px solid #cdbda5;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.learn-item i {
+    color: #a17835;
+    font-size: 18px;
+}
+
+.learn-item span {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+    padding: 120px 20px;
+    text-align: center;
+    background: #171011;
+    color: white;
+}
+
+.cta-label {
+    color: #e5c57c;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.cta h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 6vw, 75px);
+    font-weight: 400;
+    margin: 18px 0;
+}
+
+.cta p {
+    color: #aaa099;
+    font-size: 12px;
+    margin-bottom: 32px;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 16px 30px;
+
+    background: #e5c57c;
+    color: #211314;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.cta-btn:hover {
+    background: #fff1c8;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background: #10090a;
+    color: #8f817a;
+    padding: 45px 7% 25px;
+}
+
+.footer-top {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-logo {
+    color: #e5c57c;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+}
+
+.footer-sub {
+    font-size: 8px;
+    letter-spacing: 4px;
+    margin-top: 3px;
+}
+
+.social {
+    display: flex;
+    gap: 18px;
+}
+
+.social a {
+    color: #a99d95;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.social a:hover {
+    color: #e5c57c;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 22px;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 9px;
+    }
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .learning-inner {
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        padding: 22px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .course-hero {
+        min-height: 540px;
+    }
+
+    .hero-content {
+        padding: 70px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 68px;
+    }
+
+    .intro-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .intro-text {
+        border-left: none;
+        border-top: 1px solid #d7bd82;
+        padding: 25px 0 0;
+    }
+
+    .section-top {
+        display: block;
+    }
+
+    .section-description {
+        margin-top: 20px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card {
+        height: 460px;
+    }
+
+    .levels {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<nav class="navbar">
+<a href="index.html" class="logo">
+    <span class="logo-main">SAMRA</span>
+    <span class="logo-sub">DANCE ACADEMY</span>
+</a>
+
+<div class="nav-links">
+
+    <a href="index.html">HOME</a>
+
+    <a href="about.html">ABOUT</a>
+
+    <a href="dance-forms.html">DANCE FORMS</a>
+
+    <a href="courses.html" class="active">COURSES</a>
+
+    <a href="gallery.html">GALLERY</a>
+
+    <a href="contact.html">CONTACT</a>
+
+    <a href="enroll.html">ENROLL</a>
+
+</div>
+```
+
+</nav>
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="course-hero">
+
+
+<img src="images/courses-hero.jpg"
+     alt="Indian classical dancer performing">
+
+<div class="hero-content">
+
+    <div class="hero-label">
+        LEARN · PERFORM · PRESERVE
+    </div>
+
+    <h1>
+        Your journey<br>
+        begins with <span>dance.</span>
+    </h1>
+
+    <p>
+        Discover the discipline, expression and timeless beauty
+        of Indian classical dance through thoughtfully designed
+        learning experiences at Samra Dance Academy.
+    </p>
+
+    <a href="#courses" class="hero-btn">
+        EXPLORE COURSES
+        <i class="bi bi-arrow-down"></i>
+    </a>
+
+</div>
+
+
+</section>
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="intro">
+
+
+<div class="intro-inner">
+
+    <div>
+
+        <div class="intro-small">
+            THE SAMRA METHOD
+        </div>
+
+        <h2>
+            More than<br>
+            learning steps.
+        </h2>
+
+    </div>
+
+
+    <div class="intro-text">
+
+        <p>
+            At <strong>Samra Dance Academy</strong>, dance is approached
+            as an art form, a discipline and a language of expression.
+            Our courses combine technique, rhythm, storytelling and
+            cultural understanding to help every student develop
+            with confidence and grace.
+        </p>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================================
+     CLASSICAL COURSES
+========================================= -->
+
+<section class="courses-section" id="courses">
+
+
+<div class="section-top">
+
+    <div>
+
+        <div class="section-label">
+            OUR SPECIALISATIONS
+        </div>
+
+        <h2>
+            Classical Courses
+        </h2>
+
+    </div>
+
+    <p class="section-description">
+        Explore India's classical dance traditions through
+        structured training and authentic movement vocabulary.
+    </p>
+
+</div>
+
+
+<div class="course-grid">
+
+
+    <!-- BHARATANATYAM -->
+
+    <div class="course-card">
+
+        <img src="images/bharatanatyam.jpg"
+             alt="Bharatanatyam dancer">
+
+        <div class="course-number">
+            01 / 06
+        </div>
+
+        <div class="course-info">
+
+            <h3>Bharatanatyam</h3>
+
+            <p>
+                RHYTHM · MUDRAS · EXPRESSION
+            </p>
+
+        </div>
+
+        <div class="course-arrow">
+            <i class="bi bi-arrow-up-right"></i>
+        </div>
+
+    </div>
+
+
+    <!-- KATHAK -->
+
+    <div class="course-card">
+
+        <img src="images/kathak.jpg"
+             alt="Kathak dancer">
+
+        <div class="course-number">
+            02 / 06
+        </div>
+
+        <div class="course-info">
+
+            <h3>Kathak</h3>
+
+            <p>
+                FOOTWORK · SPINS · STORYTELLING
+            </p>
+
+        </div>
+
+        <div class="course-arrow">
+            <i class="bi bi-arrow-up-right"></i>
+        </div>
+
+    </div>
+
+
+    <!-- KUCHIPUDI -->
+
+    <div class="course-card">
+
+        <img src="images/kuchipudi.jpg"
+             alt="Kuchipudi dancer">
+
+        <div class="course-number">
+            03 / 06
+        </div>
+
+        <div class="course-info">
+
+            <h3>Kuchipudi</h3>
+
+            <p>
+                GRACE · ENERGY · EXPRESSION
+            </p>
+
+        </div>
+
+        <div class="course-arrow">
+            <i class="bi bi-arrow-up-right"></i>
+        </div>
+
+    </div>
+
+
+    <!-- ODISSI -->
+
+    <div class="course-card">
+
+        <img src="images/odissi.jpg"
+             alt="Odissi dancer">
+
+        <div class="course-number">
+            04 / 06
+        </div>
+
+        <div class="course-info">
+
+            <h3>Odissi</h3>
+
+            <p>
+                SCULPTURAL · GRACEFUL · EXPRESSIVE
+            </p>
+
+        </div>
+
+        <div class="course-arrow">
+            <i class="bi bi-arrow-up-right"></i>
+        </div>
+
+    </div>
+
+
+    <!-- MOHINIYATTAM -->
+
+    <div class="course-card">
+
+        <img src="images/mohiniyattam.jpg"
+             alt="Mohiniyattam dancer">
+
+        <div class="course-number">
+            05 / 06
+        </div>
+
+        <div class="course-info">
+
+            <h3>Mohiniyattam</h3>
+
+            <p>
+                SOFTNESS · ELEGANCE · EMOTION
+            </p>
+
+        </div>
+
+        <div class="course-arrow">
+            <i class="bi bi-arrow-up-right"></i>
+        </div>
+
+    </div>
+
+
+    <!-- SATTRIYA -->
+
+    <div class="course-card">
+
+        <img src="images/sattriya.jpg"
+             alt="Sattriya dancer">
+
+        <div class="course-number">
+            06 / 06
+        </div>
+
+        <div class="course-info">
+
+            <h3>Sattriya</h3>
+
+            <p>
+                HERITAGE · RHYTHM · EXPRESSION
+            </p>
+
+        </div>
+
+        <div class="course-arrow">
+            <i class="bi bi-arrow-up-right"></i>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- =========================================
+     LEARNING JOURNEY
+========================================= -->
+
+<section class="journey">
+
+
+<div class="journey-header">
+
+    <div class="section-label">
+        FIND YOUR LEVEL
+    </div>
+
+    <h2>
+        A Journey Designed<br>
+        For Every Dancer
+    </h2>
+
+    <p>
+        Whether you are taking your first steps or refining
+        years of training, our learning path grows with you.
+    </p>
+
+</div>
+
+
+<div class="levels">
+
+
+    <div class="level">
+
+        <div class="level-number">
+            I
+        </div>
+
+        <h3>Beginner</h3>
+
+        <p>
+            Build your foundation through basic posture,
+            rhythm, movement vocabulary and introductory
+            expressions.
+        </p>
+
+    </div>
+
+
+    <div class="level">
+
+        <div class="level-number">
+            II
+        </div>
+
+        <h3>Intermediate</h3>
+
+        <p>
+            Develop stronger technique, rhythmic precision,
+            expressive ability and more complex choreography.
+        </p>
+
+    </div>
+
+
+    <div class="level">
+
+        <div class="level-number">
+            III
+        </div>
+
+        <h3>Advanced</h3>
+
+        <p>
+            Refine performance quality, repertoire,
+            abhinaya and stage confidence through intensive
+            practice.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+</section>
+
+<!-- =========================================
+     WHAT YOU LEARN
+========================================= -->
+
+<section class="learning">
+
+
+<div class="learning-inner">
+
+
+    <div>
+
+        <div class="section-label">
+            BEYOND THE MOVEMENT
+        </div>
+
+        <h2>
+            What you<br>
+            will discover.
+        </h2>
+
+        <p>
+            Our training goes beyond choreography.
+            Students develop a deeper understanding of
+            the language, discipline and heritage behind
+            every movement.
+        </p>
+
+    </div>
+
+
+    <div class="learning-list">
+
+        <div class="learn-item">
+            <i class="bi bi-music-note-beamed"></i>
+            <span>Rhythm & Tala</span>
+        </div>
+
+        <div class="learn-item">
+            <i class="bi bi-hand-index"></i>
+            <span>Mudras</span>
+        </div>
+
+        <div class="learn-item">
+            <i class="bi bi-stars"></i>
+            <span>Abhinaya</span>
+        </div>
+
+        <div class="learn-item">
+            <i class="bi bi-person-arms-up"></i>
+            <span>Technique</span>
+        </div>
+
+        <div class="learn-item">
+            <i class="bi bi-book"></i>
+            <span>Dance Heritage</span>
+        </div>
+
+        <div class="learn-item">
+            <i class="bi bi-camera-reels"></i>
+            <span>Stage Performance</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="cta">
+
+
+<div class="cta-label">
+    YOUR STORY STARTS HERE
+</div>
+
+<h2>
+    Find your rhythm.
+</h2>
+
+<p>
+    Take the first step towards discovering your dance journey.
+</p>
+
+<a href="enroll.html" class="cta-btn">
+
+    BEGIN YOUR JOURNEY
+
+    <i class="bi bi-arrow-right"></i>
+
+</a>
+
+
+</section>
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+
+<div class="footer-top">
+
+    <div>
+
+        <div class="footer-logo">
+            SAMRA
+        </div>
+
+        <div class="footer-sub">
+            DANCE ACADEMY
+        </div>
+
+    </div>
+
+
+    <div class="social">
+
+        <a href="#">
+            <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="bi bi-youtube"></i>
+        </a>
+
+        <a href="#">
+            <i class="bi bi-facebook"></i>
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+    © 2026 Samra Dance Academy · Preserving Tradition Through Movement
+
+</div>
+
+
+</footer>
+
+</body>
+</html>

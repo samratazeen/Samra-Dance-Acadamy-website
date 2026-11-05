@@ -1,0 +1,2197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dance Forms | Samra Dance Academy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fbf7f0;
+    color: #32191a;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 20;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(20, 7, 8, 0.85),
+        transparent
+    );
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+.logo-main {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 31px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #e4c274;
+}
+
+.logo-sub {
+    margin-top: 7px;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #fff4df;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e4c274;
+}
+
+.nav-btn {
+    padding: 13px 21px;
+
+    border: 1px solid #e4c274;
+
+    color: #e4c274 !important;
+}
+
+.nav-btn:hover {
+    background: #e4c274;
+
+    color: #32191a !important;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.forms-hero {
+    min-height: 72vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* HERO IMAGE */
+
+.forms-hero img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 0;
+}
+
+
+/* DARK OVERLAY */
+
+.forms-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(28, 9, 10, 0.70),
+            rgba(28, 9, 10, 0.90)
+        );
+
+    z-index: 1;
+}
+
+
+/* HERO CONTENT */
+
+.forms-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 70px 20px 0;
+}
+
+.forms-label {
+    color: #e4c274;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.forms-hero h1 {
+    color: white;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(65px, 9vw, 115px);
+
+    font-weight: 500;
+
+    line-height: 0.85;
+}
+
+.forms-hero h1 span {
+    color: #e4c274;
+
+    font-style: italic;
+}
+
+.forms-hero p {
+    max-width: 650px;
+
+    margin: 30px auto 0;
+
+    color: #dfd0c8;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.introduction {
+    padding: 105px 9%;
+
+    text-align: center;
+
+    background: #fbf7f0;
+}
+
+.section-label {
+    color: #a17835;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.introduction h2 {
+    margin-top: 17px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 58px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.gold-line {
+    width: 70px;
+
+    height: 1px;
+
+    background: #b48a43;
+
+    margin: 25px auto;
+}
+
+.introduction p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #6d5b54;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* =========================================================
+   CATEGORY TABS
+========================================================= */
+
+.dance-navigation {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 0 20px 70px;
+
+    background: #fbf7f0;
+}
+
+.dance-navigation a {
+    padding: 13px 25px;
+
+    border: 1px solid #c9aa72;
+
+    color: #72552c;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.dance-navigation a:hover {
+    background: #32191a;
+
+    color: #e4c274;
+
+    border-color: #32191a;
+}
+
+
+/* =========================================================
+   DANCE SECTION
+========================================================= */
+
+.dance-section {
+    padding: 100px 8%;
+
+    background: #f0e5d5;
+}
+
+.dance-section.dark {
+    background: #321617;
+
+    color: white;
+}
+
+.dance-heading {
+    max-width: 850px;
+
+    margin: 0 auto 65px;
+
+    text-align: center;
+}
+
+.dance-heading .label {
+    color: #a17835;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.dark .dance-heading .label {
+    color: #e4c274;
+}
+
+.dance-heading h2 {
+    margin-top: 14px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 60px;
+
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.dance-heading p {
+    margin-top: 20px;
+
+    color: #715e56;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+.dark .dance-heading p {
+    color: #cdbdb5;
+}
+
+
+/* =========================================================
+   DANCE CARDS
+========================================================= */
+
+.dance-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* CARD */
+
+.dance-card {
+    background: #fbf7f0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+    border: 1px solid #ddcdb7;
+}
+
+.dance-card:hover {
+    transform: translateY(-9px);
+
+    border-color: #bd9650;
+}
+
+
+/* IMAGE */
+
+.dance-image {
+    height: 410px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.dance-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.6s;
+}
+
+.dance-card:hover .dance-image img {
+    transform: scale(1.06);
+}
+
+
+/* NUMBER */
+
+.dance-number {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(35, 12, 13, 0.85);
+
+    border: 1px solid #e4c274;
+
+    color: #e4c274;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 17px;
+}
+
+
+/* CARD CONTENT */
+
+.dance-info {
+    padding: 27px 28px 30px;
+}
+
+.dance-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 35px;
+
+    font-weight: 600;
+
+    color: #32191a;
+}
+
+.dance-info .keywords {
+    margin-top: 8px;
+
+    color: #a17835;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.dance-info p {
+    margin-top: 15px;
+
+    color: #75635d;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   DARK CARDS
+========================================================= */
+
+.dark .dance-card {
+    background: #241011;
+
+    border-color: rgba(224,194,116,0.22);
+}
+
+.dark .dance-card:hover {
+    border-color: #d1aa5e;
+}
+
+.dark .dance-info h3 {
+    color: #fff;
+}
+
+.dark .dance-info p {
+    color: #c9bbb5;
+}
+
+
+/* =========================================================
+   WIDE FEATURE CARD
+========================================================= */
+
+.feature-section {
+    padding: 110px 8%;
+
+    background: #fbf7f0;
+}
+
+.feature {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    min-height: 570px;
+
+    background: #321617;
+
+    overflow: hidden;
+}
+
+.feature-image {
+    overflow: hidden;
+}
+
+.feature-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.feature-content {
+    padding: 70px 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.feature-label {
+    color: #e4c274;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.feature-content h2 {
+    margin-top: 18px;
+
+    color: white;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 58px;
+
+    line-height: 0.9;
+
+    font-weight: 500;
+}
+
+.feature-content h2 span {
+    color: #e4c274;
+
+    font-style: italic;
+}
+
+.feature-content p {
+    margin-top: 25px;
+
+    color: #d0c1ba;
+
+    font-size: 12px;
+
+    line-height: 2;
+}
+
+.feature-line {
+    width: 65px;
+
+    height: 1px;
+
+    background: #c8a65c;
+
+    margin: 25px 0;
+}
+
+
+/* =========================================================
+   FOLK SECTION
+========================================================= */
+
+.folk-section {
+    padding: 110px 8%;
+
+    background: #efe3d2;
+}
+
+.folk-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.folk-card {
+    background: #fbf7f0;
+
+    border-bottom: 2px solid #c19a50;
+
+    transition: 0.3s;
+}
+
+.folk-card:hover {
+    transform: translateY(-7px);
+}
+
+.folk-card img {
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.folk-content {
+    padding: 20px;
+}
+
+.folk-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+}
+
+.folk-content p {
+    margin-top: 6px;
+
+    color: #76635b;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    padding: 110px 20px;
+
+    text-align: center;
+
+    background: #241011;
+}
+
+.cta-label {
+    color: #e4c274;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.cta h2 {
+    margin-top: 17px;
+
+    color: white;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 62px;
+
+    font-weight: 500;
+
+    line-height: 0.95;
+}
+
+.cta p {
+    max-width: 600px;
+
+    margin: 22px auto 30px;
+
+    color: #cdbdb5;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+.btn-primary {
+    display: inline-block;
+
+    padding: 16px 30px;
+
+    background: #d9b667;
+
+    color: #301415;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #efd58e;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 55px 8% 25px;
+
+    background: #18090a;
+
+    color: #cbbcb4;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+footer h4 {
+    color: #e4c274;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
+}
+
+.footer-about {
+    max-width: 350px;
+
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 11px;
+
+    font-size: 12px;
+}
+
+footer a {
+    color: #cbbcb4;
+
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #e4c274;
+}
+
+.social {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.social a {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(227,194,116,0.35);
+
+    color: #e4c274;
+}
+
+.copyright {
+    margin-top: 45px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    text-align: center;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .dance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .folk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        height: 500px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .dance-grid,
+    .folk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .introduction,
+    .dance-section,
+    .feature-section,
+    .folk-section {
+        padding: 80px 7%;
+    }
+
+    .introduction h2,
+    .dance-heading h2 {
+        font-size: 45px;
+    }
+
+    .feature-content {
+        padding: 50px 35px;
+    }
+
+    .feature-content h2 {
+        font-size: 48px;
+    }
+
+    .feature-image {
+        height: 400px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .forms-hero h1 {
+        font-size: 60px;
+    }
+
+    .dance-navigation {
+        flex-wrap: wrap;
+    }
+
+    .dance-image {
+        height: 450px;
+    }
+
+    .cta h2 {
+        font-size: 45px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+
+    <a href="index.html" class="logo">
+
+        <span class="logo-main">
+            SAMRA
+        </span>
+
+        <span class="logo-sub">
+            DANCE ACADEMY
+        </span>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="index.html">HOME</a>
+        </li>
+
+        <li>
+            <a href="about.html">ABOUT</a>
+        </li>
+
+        <li>
+            <a href="dance-forms.html">DANCE FORMS</a>
+        </li>
+
+        <li>
+            <a href="courses.html">COURSES</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">GALLERY</a>
+        </li>
+
+        <li>
+            <a href="contact.html">CONTACT</a>
+        </li>
+
+        <li>
+            <a href="contact.html" class="nav-btn">
+                ENROLL NOW
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="forms-hero">
+
+
+    <!--
+        HERO IMAGE
+
+        You can replace this later with your
+        own Indian classical dance image.
+    -->
+
+    <img
+        src="images/dance-forms-hero.jpg"
+        alt="Indian classical dancer"
+    >
+
+
+    <div class="forms-overlay"></div>
+
+
+    <div class="forms-hero-content">
+
+        <div class="forms-label">
+            THE ART OF MOVEMENT
+        </div>
+
+
+        <h1>
+
+            India's
+            <span>Dance Heritage</span>
+
+        </h1>
+
+
+        <p>
+
+            From the sacred traditions of classical dance
+            to the vibrant spirit of folk performances,
+            discover the many languages of Indian dance.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
+
+<section class="introduction">
+
+
+    <div class="section-label">
+        DISCOVER THE LANGUAGE OF DANCE
+    </div>
+
+
+    <h2>
+        Many Traditions.<br>
+        One Cultural Soul.
+    </h2>
+
+
+    <div class="gold-line"></div>
+
+
+    <p>
+
+        India is home to an extraordinary variety of dance
+        traditions. Each form carries its own vocabulary,
+        costumes, music, rhythm and stories — yet together
+        they form a beautiful expression of India's cultural
+        identity.
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<div class="dance-navigation">
+
+    <a href="#classical">
+        CLASSICAL
+    </a>
+
+    <a href="#folk">
+        FOLK
+    </a>
+
+    <a href="#regional">
+        REGIONAL
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     CLASSICAL DANCE
+===================================================== -->
+
+<section class="dance-section" id="classical">
+
+
+    <div class="dance-heading">
+
+        <div class="label">
+            CLASSICAL TRADITIONS
+        </div>
+
+
+        <h2>
+            The Eight Classical Forms
+        </h2>
+
+
+        <p>
+
+            Rooted in centuries of tradition, India's
+            classical dance forms combine movement,
+            rhythm, expression and storytelling.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="dance-grid">
+
+
+        <!-- BHARATANATYAM -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/bharatanatyam.jpg"
+                    alt="Bharatanatyam dancer"
+                >
+
+                <div class="dance-number">
+                    01
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Bharatanatyam
+                </h3>
+
+                <div class="keywords">
+                    Grace • Rhythm • Expression
+                </div>
+
+                <p>
+                    A highly expressive classical form
+                    known for precise movements,
+                    rhythmic footwork and powerful
+                    storytelling.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KATHAK -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/kathak.jpg"
+                    alt="Kathak dancer"
+                >
+
+                <div class="dance-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Kathak
+                </h3>
+
+                <div class="keywords">
+                    Storytelling • Rhythm • Elegance
+                </div>
+
+                <p>
+                    Famous for graceful spins, intricate
+                    footwork and storytelling through
+                    expressive movement.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KATHAKALI -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/kathakali.jpg"
+                    alt="Kathakali performer"
+                >
+
+                <div class="dance-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Kathakali
+                </h3>
+
+                <div class="keywords">
+                    Drama • Expression • Theatre
+                </div>
+
+                <p>
+                    Kerala's spectacular dance-drama
+                    tradition, recognised for elaborate
+                    costumes and powerful expressions.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KUCHIPUDI -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/kuchipudi.jpg"
+                    alt="Kuchipudi dancer"
+                >
+
+                <div class="dance-number">
+                    04
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Kuchipudi
+                </h3>
+
+                <div class="keywords">
+                    Grace • Drama • Rhythm
+                </div>
+
+                <p>
+                    A dynamic dance tradition from Andhra
+                    Pradesh blending expressive storytelling,
+                    rhythmic movement and theatre.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ODISSI -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/odissi.jpg"
+                    alt="Odissi dancer"
+                >
+
+                <div class="dance-number">
+                    05
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Odissi
+                </h3>
+
+                <div class="keywords">
+                    Sculptural • Graceful • Devotional
+                </div>
+
+                <p>
+                    Known for its elegant poses, lyrical
+                    movement and distinctive tribhangi
+                    body posture.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MANIPURI -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/manipuri.jpg"
+                    alt="Manipuri dancer"
+                >
+
+                <div class="dance-number">
+                    06
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Manipuri
+                </h3>
+
+                <div class="keywords">
+                    Devotional • Soft • Flowing
+                </div>
+
+                <p>
+                    A graceful tradition from Manipur,
+                    celebrated for fluid movements and
+                    devotional themes.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MOHINIYATTAM -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/mohiniyattam.jpg"
+                    alt="Mohiniyattam dancer"
+                >
+
+                <div class="dance-number">
+                    07
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Mohiniyattam
+                </h3>
+
+                <div class="keywords">
+                    Feminine • Grace • Flow
+                </div>
+
+                <p>
+                    Kerala's graceful classical tradition
+                    characterised by gentle movements and
+                    elegant expressions.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SATTRIYA -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/sattriya.jpg"
+                    alt="Sattriya dancer"
+                >
+
+                <div class="dance-number">
+                    08
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Sattriya
+                </h3>
+
+                <div class="keywords">
+                    Devotion • Rhythm • Spirituality
+                </div>
+
+                <p>
+                    Assam's classical tradition developed
+                    through the Vaishnavite monastic culture
+                    of the region.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURE
+===================================================== -->
+
+<section class="feature-section">
+
+
+    <div class="feature">
+
+
+        <div class="feature-image">
+
+            <img
+                src="images/classical-performance.jpg"
+                alt="Indian classical dance performance"
+            >
+
+        </div>
+
+
+        <div class="feature-content">
+
+            <div class="feature-label">
+                BEYOND MOVEMENT
+            </div>
+
+
+            <h2>
+
+                Every Gesture<br>
+                <span>Tells a Story.</span>
+
+            </h2>
+
+
+            <div class="feature-line"></div>
+
+
+            <p>
+
+                Indian classical dance brings together
+                rhythm, music, mythology, emotion and
+                expression.
+
+            </p>
+
+
+            <p>
+
+                At Samra, students learn not only the
+                physical vocabulary of dance but also
+                the cultural meaning behind every
+                movement.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOLK DANCES
+===================================================== -->
+
+<section class="dance-section dark" id="folk">
+
+
+    <div class="dance-heading">
+
+        <div class="label">
+            FOLK TRADITIONS
+        </div>
+
+
+        <h2>
+            The Spirit of India
+        </h2>
+
+
+        <p>
+
+            India's folk dances reflect the celebrations,
+            stories, communities and everyday life of
+            different regions across the country.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="dance-grid">
+
+
+        <!-- BHANGRA -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/bhangra.jpg"
+                    alt="Bhangra dancers"
+                >
+
+                <div class="dance-number">
+                    01
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Bhangra
+                </h3>
+
+                <div class="keywords">
+                    Punjab • Energy • Celebration
+                </div>
+
+                <p>
+                    A vibrant Punjabi folk dance filled
+                    with energetic movements and
+                    celebratory rhythms.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- GARBA -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/garba.jpg"
+                    alt="Garba dancers"
+                >
+
+                <div class="dance-number">
+                    02
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Garba
+                </h3>
+
+                <div class="keywords">
+                    Gujarat • Celebration • Rhythm
+                </div>
+
+                <p>
+                    A circular community dance traditionally
+                    associated with festivals and joyful
+                    celebrations.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- GHUMAR -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/ghoomar.jpg"
+                    alt="Ghoomar dancers"
+                >
+
+                <div class="dance-number">
+                    03
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Ghoomar
+                </h3>
+
+                <div class="keywords">
+                    Rajasthan • Grace • Celebration
+                </div>
+
+                <p>
+                    A graceful Rajasthani folk dance known
+                    for flowing movements and beautiful
+                    traditional costumes.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LAVANI -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/lavani.jpg"
+                    alt="Lavani dancer"
+                >
+
+                <div class="dance-number">
+                    04
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Lavani
+                </h3>
+
+                <div class="keywords">
+                    Maharashtra • Rhythm • Expression
+                </div>
+
+                <p>
+                    A dynamic Maharashtrian performance
+                    tradition combining expressive movement,
+                    rhythm and music.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DANDIYA -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/dandiya.jpg"
+                    alt="Dandiya dancers"
+                >
+
+                <div class="dance-number">
+                    05
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Dandiya
+                </h3>
+
+                <div class="keywords">
+                    Gujarat • Sticks • Festival
+                </div>
+
+                <p>
+                    A lively Gujarati dance performed with
+                    decorated sticks and rhythmic group
+                    patterns.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BIHU -->
+
+        <article class="dance-card">
+
+            <div class="dance-image">
+
+                <img
+                    src="images/bihu.jpg"
+                    alt="Bihu dancers"
+                >
+
+                <div class="dance-number">
+                    06
+                </div>
+
+            </div>
+
+
+            <div class="dance-info">
+
+                <h3>
+                    Bihu
+                </h3>
+
+                <div class="keywords">
+                    Assam • Joy • Festival
+                </div>
+
+                <p>
+                    An energetic Assamese folk tradition
+                    associated with seasonal celebrations
+                    and community life.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REGIONAL DANCES
+===================================================== -->
+
+<section class="folk-section" id="regional">
+
+
+    <div class="dance-heading">
+
+        <div class="label">
+            REGIONAL EXPRESSIONS
+        </div>
+
+
+        <h2>
+            Stories From Every Corner
+        </h2>
+
+
+        <p>
+
+            Explore India's diverse regional dance
+            traditions and the communities that keep
+            them alive.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="folk-grid">
+
+
+        <div class="folk-card">
+
+            <img
+                src="images/chhau.jpg"
+                alt="Chhau dance"
+            >
+
+            <div class="folk-content">
+
+                <h3>
+                    Chhau
+                </h3>
+
+                <p>
+                    Odisha • Jharkhand • West Bengal
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="folk-card">
+
+            <img
+                src="images/kolattam.jpg"
+                alt="Kolattam dance"
+            >
+
+            <div class="folk-content">
+
+                <h3>
+                    Kolattam
+                </h3>
+
+                <p>
+                    Tamil Nadu • Andhra Pradesh
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+      
+
+
+        <div class="folk-card">
+
+            <img
+                src="images/kalbelia.jpg"
+                alt="Kalbelia dance"
+            >
+
+            <div class="folk-content">
+
+                <h3>
+                    Kalbelia
+                </h3>
+
+                <p>
+                    Rajasthan • Folk • Expression
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+
+    <div class="cta-label">
+        BEGIN YOUR JOURNEY
+    </div>
+
+
+    <h2>
+
+        Find Your Rhythm.<br>
+        Discover Your Expression.
+
+    </h2>
+
+
+    <p>
+
+        Whether you are taking your first step or
+        continuing a lifelong passion, Samra Dance
+        Academy welcomes you.
+
+    </p>
+
+
+    <a
+        href="courses.html"
+        class="btn-primary"
+    >
+        EXPLORE CLASSES
+    </a>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-main">
+                    SAMRA
+                </span>
+
+                <span class="logo-sub">
+                    DANCE ACADEMY
+                </span>
+
+            </a>
+
+
+            <p class="footer-about">
+
+                Preserving tradition. Inspiring expression.
+                Celebrating India's extraordinary dance
+                heritage through every generation.
+
+            </p>
+
+
+            <div class="social">
+
+                <a href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-youtube"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div>
+
+            <h4>
+                EXPLORE
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="dance-forms.html">Dance Forms</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div>
+
+            <h4>
+                ACADEMY
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="courses.html">Courses</a>
+                </li>
+
+                <li>
+                    <a href="events.html">Events</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Admissions</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div>
+
+            <h4>
+                DANCE
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="#classical">Classical</a>
+                </li>
+
+                <li>
+                    <a href="#folk">Folk</a>
+                </li>
+
+                <li>
+                    <a href="#regional">Regional</a>
+                </li>
+
+                <li>
+                    <a href="courses.html">Classes</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 SAMRA DANCE ACADEMY.
+        ALL RIGHTS RESERVED.
+
+    </div>
+
+
+</footer>
+
+
+</body>
+
+</html>
+
